@@ -95,7 +95,7 @@ export function TemperatureConverter() {
   const ActiveIcon = activeTone ? toneStyles[activeTone].Icon : null
 
   return (
-    <Card className="w-full max-w-2xl mx-auto shadow-md">
+    <Card className="w-full max-w-2xl mx-auto border-primary/20 bg-gradient-to-br from-primary/5 via-card to-accent/30 shadow-md">
       <CardHeader>
         <CardTitle
           role="heading"
@@ -123,7 +123,7 @@ export function TemperatureConverter() {
                 setTemperature(e.target.value)
                 setResult(null)
               }}
-              className="w-32 text-center text-lg h-14"
+              className="w-32 text-center text-lg h-14 border-primary/30 bg-secondary/50 font-semibold shadow-inner transition-colors focus-visible:border-primary"
             />
           </div>
 
@@ -134,7 +134,7 @@ export function TemperatureConverter() {
               setResult(null)
             }}
           >
-            <SelectTrigger className="w-48 h-14 text-lg">
+            <SelectTrigger className="w-48 h-14 text-lg border-primary/30 bg-secondary/50 font-medium shadow-sm transition-colors hover:bg-secondary">
               <SelectValue placeholder="From Unit" />
             </SelectTrigger>
             <SelectContent>
@@ -151,7 +151,7 @@ export function TemperatureConverter() {
               setResult(null)
             }}
           >
-            <SelectTrigger className="w-48 h-14 text-lg">
+            <SelectTrigger className="w-48 h-14 text-lg border-primary/30 bg-secondary/50 font-medium shadow-sm transition-colors hover:bg-secondary">
               <SelectValue placeholder="To Unit" />
             </SelectTrigger>
             <SelectContent>
@@ -164,7 +164,7 @@ export function TemperatureConverter() {
           <Button
             onClick={handleConvert}
             disabled={!isConvertEnabled}
-            className="h-14 px-8 text-lg font-normal shadow-sm transition-colors"
+            className="h-14 px-8 text-lg font-semibold shadow-md transition-all hover:shadow-lg hover:brightness-110 active:scale-[0.98]"
           >
             Convert
           </Button>
